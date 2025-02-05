@@ -45,8 +45,10 @@ let idk={
   })
 
 app.get("/players/:index",(req,res)=>{
-  Conts i =req.params.index
+  const i = req.params.index
+  res.render("player.ejs",idk.team[0].players[i])
 })
+
   //app.use("/players",(req,res)=>{
   //  res.render("player.ejs",idk.team[0]);
   //})
