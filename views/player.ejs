@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeBron James</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .player {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .player img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>LeBron James</h1>
+    <div id="player"></div>
+
+    <script>
+        const player = {
+            firstName: "LeBron",
+            lastName: "James",
+            photoUrl: "https://m.media-amazon.com/images/I/81MoV7qLkrL.jpg",
+            startYear: 2003,
+            funFact: "LeBron James is the only player to have won NBA Finals MVP with three different franchises."
+        };
+
+        const playerContainer = document.getElementById("player");
+
+        const playerDiv = document.createElement("div");
+        playerDiv.classList.add("player");
+        playerDiv.innerHTML = `
+            <img src="${player.photoUrl}" alt="${player.firstName} ${player.lastName}"><br>
+            <strong>${player.firstName} ${player.lastName}</strong><br>
+            <em>Start Year: ${player.startYear}</em><br>
+            <p>${player.funFact}</p>
+        `;
+        playerContainer.appendChild(playerDiv);
+    </script>
+</body>
+</html>
